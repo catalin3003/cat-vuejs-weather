@@ -94,7 +94,7 @@ let app = new Vue({
   methods: {
     getWeatherData: function(){
       encoded_place = this.place.replace(/ /g,'');
-      api_key = 'f0a2c2834ce0564476a07dc2627a5baf';
+      api_key = ''; // Key removed (deactivated). Add your own OpenWeatherMap key to run locally.
       this.$http.get('https://api.openweathermap.org/data/2.5/weather?q='+encoded_place+'&appid='+api_key).then(response => {
         this.weather_descrip = response['data']['weather'][0]['description'];
       this.country = response['data']['sys']['country'];
